@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--mixin place // move this mixin somewhere else
+div.place
+        img(src="https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png", alt="Type")
+        p.text-muted Pull & Bear
+        br
+        img(src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/map-marker-icon.png", alt="Location")
+        p Strada Zidului, Nr. 198.
+        br
+        img(src="http://www.clipartbest.com/cliparts/Rid/RrE/RidRrE7yT.png", alt="Open/Closed")
+        p Open now: False/True
+        br
+        img(src="https://openclipart.org/image/2400px/svg_to_png/215532/1425710397.png", alt="")
+        p Rating: 4.6
+      
+      
+-->
+<html> 
+  <head> 
+    <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body> 
+    <h1 class="text-sm-center">What place are you looking for?</h1>
+    <div id="search-bar">
+      <input id="search-input" type="text" placeholder="search for a location..."><img id="search-click" src="http://www.zdnet.be/wp-content/themes/ZDNet/images_matrix/base/search-icon.png">
+    </div>
+    <div id="types" class="dropdown">
+      <button id="types-btn" type="button" data-toggle="dropdown" class="btn dropdown-toggle">Types of Places<span class="caret"></span></button>
+      <ul id="type-list" class="dropdown-menu">
+        <li>Accounting</li>
+        <li>Airport</li>
+        <li>Aquarium </li>
+        <li>ATM</li>
+        <li>Bakery</li>
+        <li>Bank</li>
+        <li>Beauty Salon</li>
+        <li>Bowling Alley</li>
+        <li>Bus Station</li>
+        <li>Cafe</li>
+        <li>Car Dealer</li>
+        <li>Car Repair</li>
+        <li>Car Wash</li>
+        <li>Casino</li>
+        <li>Cemetery</li>
+        <li>Church</li>
+        <li>Clothing Store</li>
+        <li>Convenience Store</li>
+        <li>Court House</li>
+        <li>Dentist</li>
+        <li>Doctor</li>
+        <li>Electrician</li>
+        <li>Electronics Store</li>
+        <li>Embassy</li>
+        <li>Fire Station</li>
+        <li>Florist</li>
+        <li>Food</li>
+        <li>Funeral Home</li>
+        <li>Furniture Store</li>
+        <li>Gas Station</li>
+        <li>Grocery or Supermarket</li>
+        <li>Gym</li>
+        <li>Hair Care</li>
+        <li>Hardware Store</li>
+        <li>Hospital</li>
+        <li>Insurance Agency</li>
+        <li>Jewelry Store</li>
+        <li>Laundry</li>
+        <li>Lawyer</li>
+        <li>Library</li>
+        <li>Locksmith</li>
+        <li>Lodging</li>
+        <li>Meal Delivery</li>
+        <li>Movie Theater</li>
+        <li>Moving Company</li>
+        <li>Museum</li>
+        <li>Night Club</li>
+        <li>Painter</li>
+        <li>Park</li>
+        <li>Pet Store</li>
+        <li>Pharmacy</li>
+        <li>Physiotherapist</li>
+        <li>Plumber</li>
+        <li>Police</li>
+        <li>Post Office</li>
+        <li>Real Estate Agency</li>
+        <li>Restaurant</li>
+        <li>School</li>
+        <li>Shoe Store</li>
+        <li>Shopping Mall</li>
+        <li>Stadium</li>
+        <li>Store</li>
+        <li>Subway Station</li>
+        <li>Train Station</li>
+        <li>Transit Station</li>
+        <li>Travel Agency</li>
+        <li>University</li>
+        <li>Veterinary Care</li>
+        <li>Zoo</li>
+      </ul>
+    </div>
+    <div id="radius"><span>Radius: </span>
+      <input type="number" placeholder="min 500, max 10000"><span> Meters</span>
+    </div>
+    <div id="map"></div>
+    <div id="locations"></div>
+    <!-- maps and places-->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBU2VCzwSYpv7zNAShmFAMHO64CMcqjLIk&amp;libraries=places"></script>
+    <!-- jquery-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.js"></script>
+    <!-- bootstrap js-->
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"> </script>
+    <!-- my js-->
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

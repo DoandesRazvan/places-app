@@ -1,0 +1,124 @@
+doctype html
+
+//mixin place // move this mixin somewhere else
+  div.place
+          img(src="https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png", alt="Type")
+          p.text-muted Pull & Bear
+          br
+          img(src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/map-marker-icon.png", alt="Location")
+          p Strada Zidului, Nr. 198.
+          br
+          img(src="http://www.clipartbest.com/cliparts/Rid/RrE/RidRrE7yT.png", alt="Open/Closed")
+          p Open now: False/True
+          br
+          img(src="https://openclipart.org/image/2400px/svg_to_png/215532/1425710397.png", alt="")
+          p Rating: 4.6
+        
+        
+html 
+  head 
+    link(rel="stylesheet", href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css")
+    link(rel="stylesheet", href="styles.css")
+  body 
+    h1.text-sm-center What place are you looking for?
+    
+    div#search-bar
+      input#search-input(type="text", placeholder="search for a location...")
+      img#search-click(src="http://www.zdnet.be/wp-content/themes/ZDNet/images_matrix/base/search-icon.png")
+
+    div.dropdown#types
+      button.btn.dropdown-toggle#types-btn(type="button", data-toggle="dropdown") Types of Places
+        span.caret
+      ul.dropdown-menu#type-list
+        li Accounting
+        li Airport
+        li Aquarium 
+        li ATM
+        li Bakery
+        li Bank
+        li Beauty Salon
+        li Bowling Alley
+        li Bus Station
+        li Cafe
+        li Car Dealer
+        li Car Repair
+        li Car Wash
+        li Casino
+        li Cemetery
+        li Church
+        li Clothing Store
+        li Convenience Store
+        li Court House
+        li Dentist
+        li Doctor
+        li Electrician
+        li Electronics Store
+        li Embassy
+        li Fire Station
+        li Florist
+        li Food
+        li Funeral Home
+        li Furniture Store
+        li Gas Station
+        li Grocery or Supermarket
+        li Gym
+        li Hair Care
+        li Hardware Store
+        li Hospital
+        li Insurance Agency
+        li Jewelry Store
+        li Laundry
+        li Lawyer
+        li Library
+        li Locksmith
+        li Lodging
+        li Meal Delivery
+        li Movie Theater
+        li Moving Company
+        li Museum
+        li Night Club
+        li Painter
+        li Park
+        li Pet Store
+        li Pharmacy
+        li Physiotherapist
+        li Plumber
+        li Police
+        li Post Office
+        li Real Estate Agency
+        li Restaurant
+        li School
+        li Shoe Store
+        li Shopping Mall
+        li Stadium
+        li Store
+        li Subway Station
+        li Train Station
+        li Transit Station
+        li Travel Agency
+        li University
+        li Veterinary Care
+        li Zoo
+
+    div#radius
+      span Radius: 
+      input(type="number", placeholder="min 500, max 10000")
+      span  Meters
+      
+    div#map
+    
+    div#locations
+    
+    // maps and places
+    script(type="text/javascript", src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBU2VCzwSYpv7zNAShmFAMHO64CMcqjLIk&libraries=places")
+
+    // jquery
+    script(type="text/javascript", src="https://code.jquery.com/jquery-2.2.3.js")
+
+    // bootstrap js
+    script(type="text/javascript", src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js")  
+    
+    // my js
+    script(type="text/javascript", src="script.js")
+    
+    

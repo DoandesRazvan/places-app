@@ -1,0 +1,117 @@
+body {
+  background: #555B6E;
+  transition: background 0.3s ease-in-out;
+  text-align: center;
+}
+
+h1 {
+  color: white;
+  font-weight: 100;
+  letter-spacing: 2px;
+  margin: 10px;
+}
+
+#radius {
+  margin-bottom: 10px;
+}
+
+#radius span {
+  color: white;
+  font-size: 20px;
+}
+
+#radius input {
+  padding: 5px;
+}
+
+#types {
+  margin-bottom: 20px;
+}
+
+#types button {
+  background: #FCFFFD;
+  border-radius: 0;
+  padding: 5px 100px;
+}
+
+#types ul {
+  background: #FCFFFD;
+  border-radius: 0;
+  padding: 5px 147.5px;
+  text-align: center;
+}
+
+#types ul li {
+  cursor: pointer;
+}
+
+#map {
+  height: 400px;
+  width: 802px;
+  display: block;
+  margin: 0 auto;
+  background: green;
+  border: solid 1px black;
+}
+
+#search-bar {
+  display: block;
+  margin: 20px 0;
+}
+
+#search-bar #search-input {
+  width: 400px;
+  padding: 5px;
+  outline: none;
+  border: none;
+  box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.3);
+}
+
+#search-bar #search-click {
+  height: 28px;
+  width: 28px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+
+.place {
+  position: relative;
+  display: block;
+  width: 800px;
+  margin: 10px auto;
+  padding: 5px;
+  background: #FCFFFD;
+  text-align: left;
+  box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: background 0.15s ease-in-out;
+}
+
+.place:hover {
+  background: #444;
+}
+
+.place:hover p {
+  color: #fffafa;
+}
+
+.place p {
+  display: inline-block;
+  margin-bottom: -10px;
+  margin-left: 5px;
+  padding-top: 2px;
+}
+
+.place img {
+  width: 22px;
+  height: 22px;
+}
+
+.active-style {
+  background: #444;
+}
+
+.active-style p {
+  color: #fffafa;
+}
