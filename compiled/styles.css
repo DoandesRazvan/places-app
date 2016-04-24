@@ -26,31 +26,37 @@ h1 {
 
 #types {
   margin-bottom: 20px;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 #types button {
   background: #FCFFFD;
+  width: 300px;
+  max-width: 300px;
+  overflow: hidden;
   border-radius: 0;
-  padding: 5px 100px;
+  outline: none;
 }
 
 #types ul {
   background: #FCFFFD;
   border-radius: 0;
-  padding: 5px 147.5px;
   text-align: center;
 }
 
 #types ul li {
+  width: 298px;
   cursor: pointer;
 }
 
 #map {
   height: 400px;
-  width: 802px;
+  width: 800px;
   display: block;
-  margin: 0 auto;
-  background: green;
+  margin: 0 auto 10px;
+  background: #222;
   border: solid 1px black;
 }
 
@@ -82,7 +88,7 @@ h1 {
   margin: 10px auto;
   padding: 5px;
   background: #FCFFFD;
-  text-align: left;
+  text-align: justify;
   box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   transition: background 0.15s ease-in-out;
@@ -97,15 +103,14 @@ h1 {
 }
 
 .place p {
-  display: inline-block;
+  display: inline;
   margin-bottom: -10px;
   margin-left: 5px;
-  padding-top: 2px;
 }
 
 .place img {
-  width: 22px;
   height: 22px;
+  width: 22px;
 }
 
 .active-style {
@@ -114,4 +119,37 @@ h1 {
 
 .active-style p {
   color: #fffafa;
+}
+
+@media (max-width: 850px) {
+  .place {
+    width: 400px;
+  }
+  #map {
+    height: 300px;
+    width: 400px;
+  }
+}
+
+@media (max-width: 460px) {
+  .place {
+    width: 300px;
+  }
+  #map {
+    height: 250px;
+    width: 300px;
+  }
+  #search-bar #search-input {
+    width: 275px;
+  }
+  #search-bar #search-click {
+    width: 22px;
+    height: 22px;
+  }
+  #radius input {
+    padding: 0 5px;
+  }
+  #radius span {
+    font-size: 17px;
+  }
 }

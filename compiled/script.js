@@ -77,12 +77,12 @@ $(function(){
           var openNow;
 
           if (results[i].opening_hours === undefined) { // checks to see if it's undefined, because the script wouldn't work if it is.
-            openNow = "<p>Open Now: <span class='text-info'>Unknown Schedule<span></p>";
+            openNow = "<p> Open Now: <span class='text-info'>Unknown Schedule<span></p>";
           } else {
             if (results[i].opening_hours.open_now === true) {
-              openNow = "<p>Open Now: <span class='text-success'>Yes</span></p>"
+              openNow = "<p> Open Now: <span class='text-success'>Yes</span></p>"
             } else {
-              openNow = "<p>Open Now: <span class='text-danger'>No</span></p>"
+              openNow = "<p> Open Now: <span class='text-danger'>No</span></p>"
             }
           }
 
@@ -126,9 +126,17 @@ $(function(){
     var $this = $(this);
     var $placeindex = $this.index();
     var thisMarker = markers[$placeindex];
-    var latLng = thisMarker.getPosition() // get coords (lat, lng)
-
-    map.setZoom(17); // zoom in
+    var latLng = thisMarker.getPosition(); // get coords (lat, lng)
+    var $windowwidth = $(window).width();
+    
+    if ($windowwidth > 850){ // zoom in conditions
+      map.setZoom(17);
+    } else if ($windowwidth > 460) {
+      map.setZoom(15);   
+    } else {
+      map.setZoom(14);
+    }
+    
     map.setCenter(latLng) // center the map based on the chosen marker
 
     setMapOnAll(null) // clear lastMarker
@@ -149,7 +157,8 @@ $(function(){
   }
   
   function geocodingApiCall() {
-    var link = "https://maps.googleapis.com/maps/api/geocode/json?address=" + $("#search-bar input").val() + "&key=AIzaSyBU2VCzwSYpv7zNAShmFAMHO64CMcqjLIk";
+    var $searchbarinput = $("#search-bar input").val();
+    var link = "https://maps.googleapis.com/maps/api/geocode/json?address=" + $searchbarinput + "&key=AIzaSyBU2VCzwSYpv7zNAShmFAMHO64CMcqjLIk";
 
     $.getJSON(link)
       .done(generate)
