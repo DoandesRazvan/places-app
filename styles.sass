@@ -19,30 +19,33 @@ h1
   input
     padding: 5px
     
-
 #types
   margin-bottom: 20px 
-
+  display: inline-flex
+  
   button
     background: #FCFFFD
-    border-radius: 0 
-    padding: 5px 100px
+    width: 300px
+    max-width: 300px
+    overflow: hidden
+    border-radius: 0
+    outline: none
   
   ul
     background: #FCFFFD
-    border-radius: 0 
-    padding: 5px 147.5px // modify this
+    border-radius: 0
     text-align: center
-  
+    
     li
+      width: 298px
       cursor: pointer
 
 #map
   height: 400px
-  width: 802px
+  width: 800px
   display: block
-  margin: 0 auto
-  background: green
+  margin: 0 auto 10px
+  background: #222
   border: solid 1px black
   
 #search-bar
@@ -71,7 +74,7 @@ h1
   margin: 10px auto
   padding: 5px
   background: #FCFFFD
-  text-align: left
+  text-align: justify
   box-shadow: 0px 3px 20px rgba(0,0,0,0.3)
   cursor: pointer
   transition: background 0.15s ease-in-out
@@ -82,17 +85,47 @@ h1
       color: #fffafa
   
   p
-    display: inline-block
+    display: inline
     margin:
       bottom: -10px
       left: 5px
-    padding-top: 2px
+      
   
   img
-    width: 22px
     height: 22px
+    width: 22px
       
 .active-style
   background: #444
   p
     color: #fffafa
+    
+@media (max-width: 850px) 
+  .place
+    width: 400px
+   
+  #map
+    height: 300px
+    width: 400px
+    
+@media (max-width: 460px)    
+  .place
+    width: 300px
+  
+  #map
+    height: 250px
+    width: 300px
+    
+  #search-bar
+    #search-input
+      width: 275px
+    
+    #search-click
+      width: 22px
+      height: 22px
+  
+  #radius
+    input
+      padding: 0 5px
+    span
+      font-size: 17px
